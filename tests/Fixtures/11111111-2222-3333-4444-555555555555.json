@@ -1,0 +1,14 @@
+{
+  "Id": "11111111-2222-3333-4444-555555555555",
+  "Content": "旧版本便签\n日本語とEnglish\n\n末尾保留空行\n",
+  "CreatedAt": "2026-09-01T00:00:00Z",
+  "UpdatedAt": "2026-09-02T00:00:00Z",
+  "X": 160,
+  "Y": 160,
+  "Width": 300,
+  "Height": 300,
+  "Color": "Pink",
+  "IsAlwaysOnTop": false,
+  "IsPinned": true,
+  "IsHidden": false
+}

@@ -1,0 +1,2602 @@
+{
+  "generated_at": "2026-11-01",
+  "source_locale": "zh-CN",
+  "target_locales": [
+    "ja-JP",
+    "zh-CN",
+    "en-US"
+  ],
+  "default_locale_planned": "ja-JP",
+  "brand": {
+    "name_en_tech": "PaperNotes",
+    "note": "显示名暂按日英 PaperNotes、中文纸间；技术标识及数据路径不变。",
+    "name_zh": "纸间",
+    "display_names": {
+      "ja-JP": "PaperNotes",
+      "zh-CN": "纸间",
+      "en-US": "PaperNotes"
+    }
+  },
+  "migration_notes": [
+    "旧版全局快捷键为代码硬编码 Ctrl+Shift+N/H，settings.json 从不持久化快捷键字段。升级后缺失 HotkeyCreate/HotkeyToggleAll 视为用户未配置，默认不绑定（显示「未设置」）。",
+    "本清单在实现语言切换前提取；当前 UI 仍固定中文。"
+  ],
+  "open_questions": [],
+  "suspected_dynamic_or_missed": [
+    "Windows 原生对话框按钮（是/否/确定）由系统语言决定，未收录。",
+    "ex.Message / UnauthorizedAccessException.Message 等系统异常原文会拼入部分错误提示。",
+    "用户便签正文、分类名称、搜索关键字属于用户内容，不收录。",
+    "快捷键组合显示（如 Ctrl+Shift+N）为键名格式化结果，修饰键英文缩写是否本地化需确认。",
+    "LoadWarning 富文本提示会显示在便签状态区（若触发）。"
+  ],
+  "items": [
+    {
+      "key": "Notes.Count",
+      "zh": "{notes.Length} 张便签",
+      "ja": "{notes.Length} 枚の付箋",
+      "en": "{notes.Length} notes",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:131"
+      ],
+      "placeholders": "{notes.Length}",
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.notes-length-张便签",
+      "source_index": 0
+    },
+    {
+      "key": "Hotkeys.RegisterFailed",
+      "zh": "「{chord}」（{actionLabel}）该快捷键无法注册，可能已被占用或受系统限制。",
+      "ja": "「{actionLabel}」のショートカット {chord} を登録できませんでした。他のアプリで使用されているか、システムで制限されています。",
+      "en": "Couldn't register {chord} for “{actionLabel}”. It may be in use by another app or restricted by Windows.",
+      "surface": "托盘 / 全局快捷键",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/DesktopIntegration.cs:86"
+      ],
+      "placeholders": [
+        "{chord}",
+        "{actionLabel}"
+      ],
+      "layout_notes": "偏长，注意换行与窄窗",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.chord-actionlabel-该快捷键无法注册-可能已被占用或受系统限制",
+      "source_index": 1
+    },
+    {
+      "key": "Notes.CategoryEmpty",
+      "zh": "「{name}」还没有便签。\n点击「新建便签」，会直接归入这个分类。",
+      "ja": "「{name}」にはまだ付箋がありません。\n「新しい付箋」で、このカテゴリに付箋を追加できます。",
+      "en": "No notes in “{name}” yet.\nChoose “New note” to add one to this category.",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:146"
+      ],
+      "placeholders": "{name}",
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.name-还没有便签-点击-新建便签-会直接归入这个分类",
+      "source_index": 2
+    },
+    {
+      "key": "Notes.NewButton",
+      "zh": "＋  新建便签",
+      "ja": "＋  新しい付箋",
+      "en": "＋  New note",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml:104"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.新建便签",
+      "source_index": 3
+    },
+    {
+      "key": "Note.Translucent",
+      "zh": "半透明",
+      "ja": "半透明",
+      "en": "Translucent",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:534"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.半透明",
+      "source_index": 4
+    },
+    {
+      "key": "Common.Save",
+      "zh": "保存",
+      "ja": "保存",
+      "en": "Save",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:180"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.保存",
+      "source_index": 5
+    },
+    {
+      "key": "Settings.Save",
+      "zh": "保存设置",
+      "ja": "保存",
+      "en": "Save",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:72"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.保存设置",
+      "source_index": 6
+    },
+    {
+      "key": "Note.SaveRetrying",
+      "zh": "保存失败 · 请检查磁盘，正在重试",
+      "ja": "保存できませんでした。ディスクを確認してください。再試行中です。",
+      "en": "Couldn't save. Check your disk. Retrying…",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:563"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.保存失败-请检查磁盘-正在重试",
+      "source_index": 7
+    },
+    {
+      "key": "Settings.SaveFailedPrefix",
+      "zh": "保存失败：",
+      "ja": "設定を保存できませんでした：",
+      "en": "Couldn't save settings:",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:216"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.保存失败",
+      "source_index": 8
+    },
+    {
+      "key": "Categories.EditTitle",
+      "zh": "编辑分类",
+      "ja": "カテゴリを編集",
+      "en": "Edit category",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:180"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.编辑分类",
+      "source_index": 9
+    },
+    {
+      "key": "Categories.EditMenu",
+      "zh": "编辑分类…",
+      "ja": "カテゴリを編集…",
+      "en": "Edit category…",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:103"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.编辑分类",
+      "source_index": 10
+    },
+    {
+      "key": "Recovery.Title",
+      "zh": "便签恢复提示",
+      "ja": "付箋の復元について",
+      "en": "Note recovery",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Program.cs:64"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.便签恢复提示",
+      "source_index": 11
+    },
+    {
+      "key": "Note.Color",
+      "zh": "便签颜色",
+      "ja": "付箋の色",
+      "en": "Note color",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:538"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.便签颜色",
+      "source_index": 12
+    },
+    {
+      "key": "Hotkeys.ModifierOnly",
+      "zh": "不能仅使用修饰键",
+      "ja": "Ctrl、Alt、Shift、Win 以外のキーも組み合わせてください。",
+      "en": "Add a key other than Ctrl, Alt, Shift, or Win.",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/HotkeyChord.cs:63"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.不能仅使用修饰键",
+      "source_index": 13
+    },
+    {
+      "key": "Export.UnsavedNotes",
+      "zh": "部分便签尚未保存，请检查磁盘后重试导出。",
+      "ja": "未保存の付箋があります。ディスクを確認してから、もう一度エクスポートしてください。",
+      "en": "Some notes haven't been saved. Check your disk, then try exporting again.",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:247"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.部分便签尚未保存-请检查磁盘后重试导出",
+      "source_index": 14
+    },
+    {
+      "key": "Notes.HideBlocked",
+      "zh": "部分便签尚未保存，暂未隐藏。请检查磁盘空间或文件夹权限。",
+      "ja": "未保存の付箋があるため、非表示にできませんでした。ディスクの空き容量とフォルダーのアクセス権を確認してください。",
+      "en": "Couldn't hide notes because some haven't been saved. Check available disk space and folder permissions.",
+      "surface": "分类 / 管理",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteManager.cs:166"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.部分便签尚未保存-暂未隐藏-请检查磁盘空间或文件夹权限",
+      "source_index": 15
+    },
+    {
+      "key": "Error.OperationFailedPrefix",
+      "zh": "操作未完成，请检查磁盘空间和文件夹权限。\n",
+      "ja": "操作を完了できませんでした。ディスクの空き容量とフォルダーのアクセス権を確認してください。\n",
+      "en": "Couldn't complete the action. Check available disk space and folder permissions.\n",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Program.cs:29"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.操作未完成-请检查磁盘空间和文件夹权限",
+      "source_index": 16
+    },
+    {
+      "key": "Edit.Undo",
+      "zh": "撤回",
+      "ja": "元に戻す",
+      "en": "Undo",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:69"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": true,
+      "source_key": "ui.撤回",
+      "source_index": 17
+    },
+    {
+      "key": "Common.Create",
+      "zh": "创建",
+      "ja": "作成",
+      "en": "Create",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:180"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.创建",
+      "source_index": 18
+    },
+    {
+      "key": "Format.Bold",
+      "zh": "粗体",
+      "ja": "太字",
+      "en": "Bold",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteEditor.cs:780",
+        "src/Stickies/NoteEditor.cs:828"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.粗体",
+      "source_index": 19
+    },
+    {
+      "key": "Notes.Open",
+      "zh": "打开便签",
+      "ja": "付箋を開く",
+      "en": "Open note",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:39"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.打开便签",
+      "source_index": 20
+    },
+    {
+      "key": "Notes.OpenListMenu",
+      "zh": "打开便签索引",
+      "ja": "付箋一覧を開く",
+      "en": "Open note list",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:546"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.打开便签索引",
+      "source_index": 21
+    },
+    {
+      "key": "Tray.OpenList",
+      "zh": "打开索引",
+      "ja": "付箋一覧を開く",
+      "en": "Open note list",
+      "surface": "托盘 / 全局快捷键",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/DesktopIntegration.cs:128"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.打开索引",
+      "source_index": 22
+    },
+    {
+      "key": "Colors.Lavender",
+      "zh": "淡紫",
+      "ja": "ラベンダー",
+      "en": "Lavender",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Models.cs:56"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.淡紫",
+      "source_index": 23
+    },
+    {
+      "key": "Export.TextButton",
+      "zh": "导出 TXT",
+      "ja": "TXT をエクスポート",
+      "en": "Export TXT",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml:106",
+        "src/Stickies/IndexWindow.xaml.cs:252",
+        "src/Stickies/IndexWindow.xaml.cs:266"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.导出-txt",
+      "source_index": 24
+    },
+    {
+      "key": "Export.TextMenu",
+      "zh": "导出 TXT…",
+      "ja": "TXT をエクスポート…",
+      "en": "Export TXT…",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:41"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.导出-txt",
+      "source_index": 25
+    },
+    {
+      "key": "Export.FailedPrefix",
+      "zh": "导出失败：\n",
+      "ja": "エクスポートできませんでした：\n",
+      "en": "Couldn't export:\n",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:266"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.导出失败",
+      "source_index": 26
+    },
+    {
+      "key": "Export.IncompleteTitle",
+      "zh": "导出未完成",
+      "ja": "エクスポートが完了しませんでした",
+      "en": "Export incomplete",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:262"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.导出未完成",
+      "source_index": 27
+    },
+    {
+      "key": "Import.Text",
+      "zh": "导入 TXT",
+      "ja": "TXT をインポート",
+      "en": "Import TXT",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml:105",
+        "src/Stickies/IndexWindow.xaml.cs:232"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.导入-txt",
+      "source_index": 28
+    },
+    {
+      "key": "Import.ResultsTitle",
+      "zh": "导入结果",
+      "ja": "インポート結果",
+      "en": "Import results",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:242"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.导入结果",
+      "source_index": 29
+    },
+    {
+      "key": "Settings.LaunchAtLogin",
+      "zh": "登录 Windows 后自动启动",
+      "ja": "Windows へのサインイン時に起動する",
+      "en": "Launch at Windows sign-in",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:101"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.登录-windows-后自动启动",
+      "source_index": 30
+    },
+    {
+      "key": "Hotkeys.RecordHint",
+      "zh": "点击后按下快捷键组合",
+      "ja": "クリックしてから、キーの組み合わせを押してください。",
+      "en": "Click, then press a key combination.",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:352"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.点击后按下快捷键组合",
+      "source_index": 31
+    },
+    {
+      "key": "Categories.Label",
+      "zh": "分类",
+      "ja": "カテゴリ",
+      "en": "Category",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:188"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.分类",
+      "source_index": 32
+    },
+    {
+      "key": "Categories.SaveFailedPrefix",
+      "zh": "分类保存失败：",
+      "ja": "カテゴリを保存できませんでした：",
+      "en": "Couldn't save category:",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Program.cs:51"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.分类保存失败",
+      "source_index": 33
+    },
+    {
+      "key": "Categories.Name",
+      "zh": "分类名称",
+      "ja": "カテゴリ名",
+      "en": "Category name",
+      "surface": "分类 / 管理",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/CategoryDialog.cs:36"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.分类名称",
+      "source_index": 34
+    },
+    {
+      "key": "Note.AlwaysOnTop",
+      "zh": "浮在所有窗口之上",
+      "ja": "常に手前に表示",
+      "en": "Always on top",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:532"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.浮在所有窗口之上",
+      "source_index": 35
+    },
+    {
+      "key": "Edit.Copy",
+      "zh": "复制",
+      "ja": "コピー",
+      "en": "Copy",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:153"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.复制",
+      "source_index": 36
+    },
+    {
+      "key": "Format.TextMismatch",
+      "zh": "富文本与正文不一致",
+      "ja": "書式付きデータと本文が一致しません。",
+      "en": "The formatted content doesn't match the plain text.",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteEditor.cs:121"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "当前为内部异常消息；若未直接展示可后续降级为开发日志",
+      "needs_confirm": false,
+      "source_key": "ui.富文本与正文不一致",
+      "source_index": 37
+    },
+    {
+      "key": "Format.Highlight",
+      "zh": "高亮",
+      "ja": "蛍光ペン",
+      "en": "Highlight",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteEditor.cs:786",
+        "src/Stickies/NoteEditor.cs:830"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.高亮",
+      "source_index": 38
+    },
+    {
+      "key": "Format.RestoreFailed",
+      "zh": "格式无法恢复，已保留完整正文",
+      "ja": "書式を復元できませんでした。本文はすべて保持されています。",
+      "en": "Couldn't restore formatting. All text has been kept.",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteEditor.cs:127"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.格式无法恢复-已保留完整正文",
+      "source_index": 39
+    },
+    {
+      "key": "Format.MismatchPlainTextKept",
+      "zh": "格式与正文不一致，已保留完整正文",
+      "ja": "書式付きデータと本文が一致しないため、本文をすべて保持しました。",
+      "en": "The formatted content didn't match the plain text. All text has been kept.",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteEditor.cs:77"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.格式与正文不一致-已保留完整正文",
+      "source_index": 40
+    },
+    {
+      "key": "Note.MoreTooltip",
+      "zh": "更多：置顶、固定、颜色、删除",
+      "ja": "その他：最前面表示、ピン留め、色、削除",
+      "en": "More: always on top, pin, color, delete",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:79"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.更多-置顶-固定-颜色-删除",
+      "source_index": 41
+    },
+    {
+      "key": "Note.PinInList",
+      "zh": "固定到索引顶部",
+      "ja": "一覧の先頭にピン留め",
+      "en": "Pin to top of list",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:536"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.固定到索引顶部",
+      "source_index": 42
+    },
+    {
+      "key": "Window.Close",
+      "zh": "关闭",
+      "ja": "閉じる",
+      "en": "Close",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/TitleBar.cs:108"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.关闭",
+      "source_index": 43
+    },
+    {
+      "key": "Notes.EmptyXaml",
+      "zh": "还没有便签。\n点击「新建便签」，留下第一个想法。",
+      "ja": "まだ付箋がありません。\n「新しい付箋」で、最初のメモを書いてみましょう。",
+      "en": "No notes yet.\nChoose “New note” to jot down your first thought.",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml:155"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.还没有便签-x0a-点击-新建便签-留下第一个想法",
+      "source_index": 44
+    },
+    {
+      "key": "App.ExitBlocked",
+      "zh": "还有便签未能保存，请检查磁盘空间或文件夹权限后重试退出。",
+      "ja": "未保存の付箋があるため、終了できませんでした。ディスクの空き容量とフォルダーのアクセス権を確認し、もう一度終了してください。",
+      "en": "Couldn't quit because some notes haven't been saved. Check available disk space and folder permissions, then try again.",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Program.cs:34"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.还有便签未能保存-请检查磁盘空间或文件夹权限后重试退出",
+      "source_index": 45
+    },
+    {
+      "key": "Window.Restore",
+      "zh": "还原",
+      "ja": "元のサイズに戻す",
+      "en": "Restore",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/TitleBar.cs:122"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.还原",
+      "source_index": 46
+    },
+    {
+      "key": "Edit.Cut",
+      "zh": "剪切",
+      "ja": "切り取り",
+      "en": "Cut",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:153"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.剪切",
+      "source_index": 47
+    },
+    {
+      "key": "Settings.NewNotesOnly",
+      "zh": "仅影响之后新建的便签，不改变已有便签。",
+      "ja": "新しく作成する付箋にのみ適用されます。既存の付箋は変わりません。",
+      "en": "Applies only to new notes. Existing notes won't change.",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:116"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.仅影响之后新建的便签-不改变已有便签",
+      "source_index": 48
+    },
+    {
+      "key": "Settings.LaunchAtLoginHelp",
+      "zh": "开机后自动打开纸间，不必手动启动。",
+      "ja": "Windows にサインインすると、PaperNotes が自動で起動します。",
+      "en": "PaperNotes opens automatically when you sign in to Windows.",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:109"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.开机后自动打开纸间-不必手动启动",
+      "source_index": 49
+    },
+    {
+      "key": "Note.BlankTitle",
+      "zh": "空白便签",
+      "ja": "空白の付箋",
+      "en": "Blank note",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Models.cs:37"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "用户内容为空时的占位标题/预览，不是用户输入本身",
+      "needs_confirm": false,
+      "source_key": "ui.空白便签",
+      "source_index": 50
+    },
+    {
+      "key": "Settings.Shortcuts",
+      "zh": "快捷键",
+      "ja": "ショートカット",
+      "en": "Keyboard shortcuts",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:143"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.快捷键",
+      "source_index": 51
+    },
+    {
+      "key": "Hotkeys.InvalidFormat",
+      "zh": "快捷键格式无效",
+      "ja": "ショートカットの形式が正しくありません。",
+      "en": "Invalid shortcut format.",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/HotkeyChord.cs:37"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.快捷键格式无效",
+      "source_index": 52
+    },
+    {
+      "key": "Hotkeys.ModifierAndKeyRequired",
+      "zh": "快捷键需要包含修饰键和主键",
+      "ja": "修飾キーと、組み合わせるキーを指定してください。",
+      "en": "Choose a modifier and another key.",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/HotkeyChord.cs:24"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.快捷键需要包含修饰键和主键",
+      "source_index": 53
+    },
+    {
+      "key": "Hotkeys.KeyRequired",
+      "zh": "快捷键需要包含主键",
+      "ja": "組み合わせるキーを指定してください。",
+      "en": "Choose a key for this shortcut.",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/HotkeyChord.cs:41"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.快捷键需要包含主键",
+      "source_index": 54
+    },
+    {
+      "key": "Hotkeys.Duplicate",
+      "zh": "两个全局快捷键不能相同。",
+      "ja": "それぞれ別のグローバルショートカットを設定してください。",
+      "en": "Use a different global shortcut for each action.",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/DesktopIntegration.cs:42",
+        "src/Stickies/SettingsWindow.cs:177"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.两个全局快捷键不能相同",
+      "source_index": 55
+    },
+    {
+      "key": "Notes.UncategorizedEmpty",
+      "zh": "没有未分类的便签。\n新建的便签会先放在这里。",
+      "ja": "未分類の付箋はありません。\nカテゴリを指定せずに作成した付箋がここに表示されます。",
+      "en": "No uncategorized notes.\nNotes created without a category appear here.",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:140"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "系统保留分类名，需与校验文案一致",
+      "needs_confirm": true,
+      "source_key": "ui.没有未分类的便签-新建的便签会先放在这里",
+      "source_index": 56
+    },
+    {
+      "key": "Notes.NoSearchResults",
+      "zh": "没有找到匹配的便签",
+      "ja": "一致する付箋がありません。",
+      "en": "No matching notes.",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:139"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.没有找到匹配的便签",
+      "source_index": 57
+    },
+    {
+      "key": "Colors.Ivory",
+      "zh": "米白",
+      "ja": "アイボリー",
+      "en": "Ivory",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Models.cs:56"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.米白",
+      "source_index": 58
+    },
+    {
+      "key": "Categories.NameHasNewline",
+      "zh": "名称不能包含换行",
+      "ja": "カテゴリ名に改行は使えません。",
+      "en": "Category names can't contain line breaks.",
+      "surface": "分类 / 管理",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteManager.cs:78"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.名称不能包含换行",
+      "source_index": 59
+    },
+    {
+      "key": "Categories.NameTooLong",
+      "zh": "名称最多 16 个字",
+      "ja": "カテゴリ名は16文字以内にしてください。",
+      "en": "Use 16 characters or fewer for the category name.",
+      "surface": "分类 / 管理",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteManager.cs:77"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": true,
+      "source_key": "ui.名称最多-16-个字",
+      "source_index": 60
+    },
+    {
+      "key": "Settings.DefaultNoteColor",
+      "zh": "默认便签颜色",
+      "ja": "新しい付箋の色",
+      "en": "Default note color",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:119"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.默认便签颜色",
+      "source_index": 61
+    },
+    {
+      "key": "Hotkeys.BareLetterOrDigit",
+      "zh": "普通字母或数字不能单独作为全局快捷键",
+      "ja": "文字や数字を単独でグローバルショートカットには設定できません。",
+      "en": "A letter or number alone can't be used as a global shortcut.",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/HotkeyChord.cs:72"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.普通字母或数字不能单独作为全局快捷键",
+      "source_index": 62
+    },
+    {
+      "key": "Colors.PaleYellow",
+      "zh": "浅黄",
+      "ja": "ペールイエロー",
+      "en": "Pale yellow",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Models.cs:56"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.浅黄",
+      "source_index": 63
+    },
+    {
+      "key": "Colors.PaleGreen",
+      "zh": "浅绿",
+      "ja": "ペールグリーン",
+      "en": "Pale green",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Models.cs:56"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.浅绿",
+      "source_index": 64
+    },
+    {
+      "key": "Common.Clear",
+      "zh": "清除",
+      "ja": "クリア",
+      "en": "Clear",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:315"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.清除",
+      "source_index": 65
+    },
+    {
+      "key": "Hotkeys.ClearTooltip",
+      "zh": "清除全局快捷键",
+      "ja": "グローバルショートカットを解除",
+      "en": "Clear global shortcut",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:325"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.清除全局快捷键",
+      "source_index": 66
+    },
+    {
+      "key": "Hotkeys.Recording",
+      "zh": "请按下快捷键组合…",
+      "ja": "キーの組み合わせを押してください…",
+      "en": "Press a key combination…",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/HotkeyChord.cs:13"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.请按下快捷键组合",
+      "source_index": 67
+    },
+    {
+      "key": "Categories.NameRequired",
+      "zh": "请输入分类名称",
+      "ja": "カテゴリ名を入力してください。",
+      "en": "Enter a category name.",
+      "surface": "分类 / 管理",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteManager.cs:76"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.请输入分类名称",
+      "source_index": 68
+    },
+    {
+      "key": "Common.Cancel",
+      "zh": "取消",
+      "ja": "キャンセル",
+      "en": "Cancel",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/CategoryDialog.cs:64",
+        "src/Stickies/SettingsWindow.cs:68"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "多处复用：确认各场景语气是否完全一致",
+      "needs_confirm": false,
+      "source_key": "ui.取消",
+      "source_index": 69
+    },
+    {
+      "key": "Categories.AllTab",
+      "zh": "全部",
+      "ja": "すべて",
+      "en": "All",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:66",
+        "src/Stickies/NoteManager.cs:79",
+        "src/Stickies/Settings.cs:36"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "「全部」在分类页签与系统保留名中语义接近，可共用译文",
+      "needs_confirm": false,
+      "source_key": "ui.全部",
+      "source_index": 70
+    },
+    {
+      "key": "Notes.AllTitle",
+      "zh": "全部便签",
+      "ja": "すべての付箋",
+      "en": "All notes",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml:97",
+        "src/Stickies/IndexWindow.xaml.cs:135",
+        "src/Stickies/IndexWindow.xaml.cs:136"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "「全部」在分类页签与系统保留名中语义接近，可共用译文",
+      "needs_confirm": false,
+      "source_key": "ui.全部便签",
+      "source_index": 71
+    },
+    {
+      "key": "Hotkeys.RequiredModifier",
+      "zh": "全局快捷键需要包含 Ctrl、Alt 或 Win",
+      "ja": "Ctrl、Alt、Win のいずれかを含めてください。",
+      "en": "Include Ctrl, Alt, or Win in the shortcut.",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/HotkeyChord.cs:67"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.全局快捷键需要包含-ctrl-alt-或-win",
+      "source_index": 72
+    },
+    {
+      "key": "Hotkeys.ScopeHelp",
+      "zh": "全局快捷键在应用处于后台时也能使用。应用内快捷键（如索引中的 Ctrl+N）不受这里影响。",
+      "ja": "グローバルショートカットは、他のアプリを使用中でも使えます。付箋一覧の Ctrl+N など、アプリ内のショートカットはこの設定の影響を受けません。",
+      "en": "Global shortcuts work even when you're using another app. In-app shortcuts, such as Ctrl+N in the note list, aren't affected by these settings.",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:147"
+      ],
+      "placeholders": {},
+      "layout_notes": "偏长，注意换行与窄窗",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.全局快捷键在应用处于后台时也能使用-应用内快捷键-如索引中的-ctrl-n-不受",
+      "source_index": 73
+    },
+    {
+      "key": "Edit.SelectAll",
+      "zh": "全选",
+      "ja": "すべて選択",
+      "en": "Select all",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:153"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.全选",
+      "source_index": 74
+    },
+    {
+      "key": "Settings.Subtitle",
+      "zh": "让便签适合你的习惯",
+      "ja": "使い方に合わせてカスタマイズ",
+      "en": "Make PaperNotes work for you",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:92"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.让便签适合你的习惯",
+      "source_index": 75
+    },
+    {
+      "key": "Format.Checklist",
+      "zh": "任务清单",
+      "ja": "チェックリスト",
+      "en": "Checklist",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteEditor.cs:792",
+        "src/Stickies/NoteEditor.cs:834"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.任务清单",
+      "source_index": 76
+    },
+    {
+      "key": "Note.DeleteTitle",
+      "zh": "删除便签",
+      "ja": "付箋を削除",
+      "en": "Delete note",
+      "surface": "分类 / 管理",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteManager.cs:184"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.删除便签",
+      "source_index": 77
+    },
+    {
+      "key": "Note.DeleteMenu",
+      "zh": "删除便签…",
+      "ja": "付箋を削除…",
+      "en": "Delete note…",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:43",
+        "src/Stickies/NoteWindow.cs:548"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.删除便签",
+      "source_index": 78
+    },
+    {
+      "key": "Categories.DeleteTitle",
+      "zh": "删除分类",
+      "ja": "カテゴリを削除",
+      "en": "Delete category",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:173"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.删除分类",
+      "source_index": 79
+    },
+    {
+      "key": "Categories.DeleteConfirm",
+      "zh": "删除分类「{category.Name}」？\n其中的便签会回到「未分类」，便签本身不会被删除。",
+      "ja": "カテゴリ「{category.Name}」を削除しますか？\n付箋は削除されず、「未分類」に移動します。",
+      "en": "Delete the category “{category.Name}”?\nIts notes will move to “Uncategorized” and won't be deleted.",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:173"
+      ],
+      "placeholders": "{category.Name}",
+      "layout_notes": "偏长，注意换行与窄窗",
+      "notes": "系统保留分类名，需与校验文案一致",
+      "needs_confirm": false,
+      "source_key": "ui.删除分类-category-name-其中的便签会回到-未分类-便签本身不会被删",
+      "source_index": 80
+    },
+    {
+      "key": "Categories.DeleteMenu",
+      "zh": "删除分类…",
+      "ja": "カテゴリを削除…",
+      "en": "Delete category…",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:104"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.删除分类",
+      "source_index": 81
+    },
+    {
+      "key": "Note.DeleteFailedPrefix",
+      "zh": "删除失败，便签仍保留。\n",
+      "ja": "削除できませんでした。付箋はそのまま残っています。\n",
+      "en": "Couldn't delete the note. It has been kept.\n",
+      "surface": "分类 / 管理",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteManager.cs:193"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.删除失败-便签仍保留",
+      "source_index": 82
+    },
+    {
+      "key": "Note.DeleteConfirm",
+      "zh": "删除这张便签？此操作无法撤销。",
+      "ja": "この付箋を削除しますか？この操作は元に戻せません。",
+      "en": "Delete this note? This can't be undone.",
+      "surface": "分类 / 管理",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteManager.cs:184"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.删除这张便签-此操作无法撤销",
+      "source_index": 83
+    },
+    {
+      "key": "Settings.Title",
+      "zh": "设置",
+      "ja": "設定",
+      "en": "Settings",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml:95"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.设置",
+      "source_index": 84
+    },
+    {
+      "key": "Settings.RecoveryWarning",
+      "zh": "设置文件无法读取，已尝试恢复备份。便签内容不受影响。",
+      "ja": "設定ファイルを読み込めなかったため、バックアップからの復元を試みました。付箋の内容に影響はありません。",
+      "en": "Couldn't read the settings file. An attempt was made to restore a backup. Your notes aren't affected.",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Settings.cs:64"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.设置文件无法读取-已尝试恢复备份-便签内容不受影响",
+      "source_index": 85
+    },
+    {
+      "key": "Notes.Search",
+      "zh": "搜索",
+      "ja": "検索",
+      "en": "Search",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml:110"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.搜索",
+      "source_index": 86
+    },
+    {
+      "key": "Colors.SkyBlue",
+      "zh": "天蓝",
+      "ja": "スカイブルー",
+      "en": "Sky blue",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Models.cs:56"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.天蓝",
+      "source_index": 87
+    },
+    {
+      "key": "Settings.General",
+      "zh": "通用",
+      "ja": "一般",
+      "en": "General",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:99"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.通用",
+      "source_index": 88
+    },
+    {
+      "key": "Tray.Quit",
+      "zh": "退出纸间",
+      "ja": "PaperNotes を終了",
+      "en": "Quit PaperNotes",
+      "surface": "托盘 / 全局快捷键",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/DesktopIntegration.cs:129"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.退出纸间",
+      "source_index": 89
+    },
+    {
+      "key": "Settings.Appearance",
+      "zh": "外观",
+      "ja": "外観",
+      "en": "Appearance",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:113"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.外观",
+      "source_index": 90
+    },
+    {
+      "key": "Categories.Uncategorized",
+      "zh": "未分类",
+      "ja": "未分類",
+      "en": "Uncategorized",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:67",
+        "src/Stickies/IndexWindow.xaml.cs:134",
+        "src/Stickies/IndexWindow.xaml.cs:197",
+        "src/Stickies/NoteManager.cs:79",
+        "src/Stickies/Settings.cs:36"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "系统保留分类名，需与校验文案一致",
+      "needs_confirm": false,
+      "source_key": "ui.未分类",
+      "source_index": 91
+    },
+    {
+      "key": "Note.Untitled",
+      "zh": "未命名便签",
+      "ja": "無題の付箋",
+      "en": "Untitled note",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Models.cs:46"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "用户内容为空时的占位标题/预览，不是用户输入本身",
+      "needs_confirm": false,
+      "source_key": "ui.未命名便签",
+      "source_index": 92
+    },
+    {
+      "key": "Hotkeys.NotSet",
+      "zh": "未设置",
+      "ja": "未設定",
+      "en": "Not set",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/HotkeyChord.cs:12",
+        "src/Stickies/HotkeyChord.cs:22"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.未设置",
+      "source_index": 93
+    },
+    {
+      "key": "Files.TextFilter",
+      "zh": "文本文件 (*.txt)|*.txt",
+      "ja": "テキストファイル (*.txt)|*.txt",
+      "en": "Text files (*.txt)|*.txt",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:232",
+        "src/Stickies/IndexWindow.xaml.cs:252"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.文本文件-txt-txt",
+      "source_index": 94
+    },
+    {
+      "key": "Format.Title",
+      "zh": "文字格式",
+      "ja": "書式",
+      "en": "Formatting",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:77",
+        "src/Stickies/NoteWindow.cs:156"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.文字格式",
+      "source_index": 95
+    },
+    {
+      "key": "Import.Utf8Required",
+      "zh": "无法按 UTF-8 读取，请将文件另存为 UTF-8 后重试。",
+      "ja": "UTF-8 として読み込めませんでした。UTF-8 形式で保存し直してから、もう一度お試しください。",
+      "en": "Couldn't read this file as UTF-8. Save it with UTF-8 encoding, then try again.",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:239"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.无法按-utf-8-读取-请将文件另存为-utf-8-后重试",
+      "source_index": 96
+    },
+    {
+      "key": "Recovery.NoteReadFailedPrefix",
+      "zh": "无法读取便签，原文件已保留：",
+      "ja": "付箋を読み込めませんでした。元のファイルは保持されています：",
+      "en": "Couldn't read the note. The original file has been kept:",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteStore.cs:45"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.无法读取便签-原文件已保留",
+      "source_index": 97
+    },
+    {
+      "key": "App.DataUnavailablePrefix",
+      "zh": "无法访问本地数据，请检查文件夹权限和可用空间。\n原有便签文件会保留。\n\n",
+      "ja": "ローカルデータにアクセスできません。フォルダーのアクセス権とディスクの空き容量を確認してください。\n既存の付箋ファイルは保持されています。\n\n",
+      "en": "Can't access local data. Check folder permissions and available disk space.\nYour existing note files have been kept.\n\n",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Program.cs:14"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.无法访问本地数据-请检查文件夹权限和可用空间-原有便签文件会保留",
+      "source_index": 98
+    },
+    {
+      "key": "App.PathUnavailable",
+      "zh": "无法确定程序路径",
+      "ja": "アプリの保存先を確認できませんでした。",
+      "en": "Couldn't determine the application path.",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Settings.cs:92"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "可能冒泡到启动失败对话框",
+      "needs_confirm": false,
+      "source_key": "ui.无法确定程序路径",
+      "source_index": 99
+    },
+    {
+      "key": "Hotkeys.UnknownKey",
+      "zh": "无法识别按键",
+      "ja": "このキーは認識できません。",
+      "en": "This key isn't recognized.",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/HotkeyChord.cs:45"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.无法识别按键",
+      "source_index": 100
+    },
+    {
+      "key": "Hotkeys.UnknownKeyPrefix",
+      "zh": "无法识别按键：",
+      "ja": "認識できないキー：",
+      "en": "Unrecognized key:",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/HotkeyChord.cs:38"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.无法识别按键",
+      "source_index": 101
+    },
+    {
+      "key": "Colors.MistGray",
+      "zh": "雾灰",
+      "ja": "ミストグレー",
+      "en": "Mist gray",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Models.cs:56"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.雾灰",
+      "source_index": 102
+    },
+    {
+      "key": "Format.Underline",
+      "zh": "下划线",
+      "ja": "下線",
+      "en": "Underline",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteEditor.cs:783",
+        "src/Stickies/NoteEditor.cs:829"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.下划线",
+      "source_index": 103
+    },
+    {
+      "key": "Tray.ShowNotes",
+      "zh": "显示便签",
+      "ja": "付箋を表示",
+      "en": "Show notes",
+      "surface": "托盘 / 全局快捷键",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/DesktopIntegration.cs:125"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.显示便签",
+      "source_index": 104
+    },
+    {
+      "key": "Notes.VisibilitySaveFailedPrefix",
+      "zh": "显示状态保存失败：",
+      "ja": "付箋の表示状態を保存できませんでした：",
+      "en": "Couldn't save note visibility:",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Program.cs:46"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.显示状态保存失败",
+      "source_index": 105
+    },
+    {
+      "key": "Settings.NewNotesOnTop",
+      "zh": "新便签默认浮在其他窗口之上",
+      "ja": "新しい付箋を常に手前に表示する",
+      "en": "Keep new notes always on top",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:115"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.新便签默认浮在其他窗口之上",
+      "source_index": 106
+    },
+    {
+      "key": "Hotkeys.CreateAction",
+      "zh": "新建便签",
+      "ja": "新しい付箋",
+      "en": "New note",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/DesktopIntegration.cs:49",
+        "src/Stickies/DesktopIntegration.cs:68",
+        "src/Stickies/DesktopIntegration.cs:123",
+        "src/Stickies/DesktopIntegration.cs:135",
+        "src/Stickies/SettingsWindow.cs:154"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "多处复用：确认各场景语气是否完全一致",
+      "needs_confirm": false,
+      "source_key": "ui.新建便签",
+      "source_index": 107
+    },
+    {
+      "key": "Tray.NewNote",
+      "zh": "新建便签    ",
+      "ja": "新しい付箋",
+      "en": "New note",
+      "surface": "托盘 / 全局快捷键",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/DesktopIntegration.cs:135"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.新建便签",
+      "source_index": 108
+    },
+    {
+      "key": "Categories.NewTitle",
+      "zh": "新建分类",
+      "ja": "新しいカテゴリ",
+      "en": "New category",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml:74",
+        "src/Stickies/IndexWindow.xaml.cs:25",
+        "src/Stickies/IndexWindow.xaml.cs:180"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "多处复用：确认各场景语气是否完全一致",
+      "needs_confirm": false,
+      "source_key": "ui.新建分类",
+      "source_index": 109
+    },
+    {
+      "key": "Categories.NewMenu",
+      "zh": "新建分类…",
+      "ja": "新しいカテゴリ…",
+      "en": "New category…",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:201"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.新建分类",
+      "source_index": 110
+    },
+    {
+      "key": "Export.SelectFolder",
+      "zh": "选择导出文件夹",
+      "ja": "エクスポート先のフォルダーを選択",
+      "en": "Choose an export folder",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:257"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.选择导出文件夹",
+      "source_index": 111
+    },
+    {
+      "key": "Colors.SelectTooltip",
+      "zh": "选择这个颜色",
+      "ja": "この色を選択",
+      "en": "Choose this color",
+      "surface": "分类 / 管理",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/CategoryDialog.cs:55"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.选择这个颜色",
+      "source_index": 112
+    },
+    {
+      "key": "Recovery.NoteRestoredPrefix",
+      "zh": "已从备份恢复一张便签。原文件已保留：",
+      "ja": "付箋を1枚、バックアップから復元しました。元のファイルは保持されています：",
+      "en": "Restored one note from a backup. The original file has been kept:",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteStore.cs:42"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": true,
+      "source_key": "ui.已从备份恢复一张便签-原文件已保留",
+      "source_index": 113
+    },
+    {
+      "key": "Export.PartialResultPrefix",
+      "zh": "已导出 {count} / {notes.Length} 张，其余未导出。\n",
+      "ja": "{notes.Length} 枚中 {count} 枚をエクスポートしました。残りの付箋はエクスポートされませんでした。\n",
+      "en": "Exported {count} of {notes.Length} notes. The remaining notes weren't exported.\n",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:262"
+      ],
+      "placeholders": [
+        "{count}",
+        "{notes.Length}"
+      ],
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.已导出-count-notes-length-张-其余未导出",
+      "source_index": 114
+    },
+    {
+      "key": "Import.PartialResultPrefix",
+      "zh": "已导入 {imported} 张。以下文件未导入：\n",
+      "ja": "{imported} 枚の付箋をインポートしました。次のファイルはインポートできませんでした：\n",
+      "en": "Imported {imported} notes. The following files weren't imported:\n",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:242"
+      ],
+      "placeholders": "{imported}",
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.已导入-imported-张-以下文件未导入",
+      "source_index": 115
+    },
+    {
+      "key": "Categories.DuplicateName",
+      "zh": "已有同名分类",
+      "ja": "同じ名前のカテゴリがすでにあります。",
+      "en": "A category with this name already exists.",
+      "surface": "分类 / 管理",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteManager.cs:81"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.已有同名分类",
+      "source_index": 116
+    },
+    {
+      "key": "Hotkeys.ToggleAllAction",
+      "zh": "隐藏 / 显示全部便签",
+      "ja": "すべての付箋を表示／非表示",
+      "en": "Show/hide all notes",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/DesktopIntegration.cs:54",
+        "src/Stickies/DesktopIntegration.cs:69",
+        "src/Stickies/SettingsWindow.cs:155"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.隐藏-显示全部便签",
+      "source_index": 117
+    },
+    {
+      "key": "Note.HideMenu",
+      "zh": "隐藏便签",
+      "ja": "付箋を非表示",
+      "en": "Hide note",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:547"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.隐藏便签",
+      "source_index": 118
+    },
+    {
+      "key": "Note.HideTooltip",
+      "zh": "隐藏便签（不会删除）",
+      "ja": "付箋を非表示（削除はされません）",
+      "en": "Hide note (without deleting)",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:82"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.隐藏便签-不会删除",
+      "source_index": 119
+    },
+    {
+      "key": "Notes.HideAll",
+      "zh": "隐藏全部便签",
+      "ja": "すべての付箋を非表示",
+      "en": "Hide all notes",
+      "surface": "托盘 / 全局快捷键",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/DesktopIntegration.cs:126"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.隐藏全部便签",
+      "source_index": 120
+    },
+    {
+      "key": "Colors.CherryPink",
+      "zh": "樱粉",
+      "ja": "さくらピンク",
+      "en": "Cherry blossom pink",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Models.cs:56"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.樱粉",
+      "source_index": 121
+    },
+    {
+      "key": "Settings.DefaultColorHelp",
+      "zh": "用于新建便签的背景色。",
+      "ja": "新しく作成する付箋の背景色です。",
+      "en": "The background color for new notes.",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:125"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.用于新建便签的背景色",
+      "source_index": 122
+    },
+    {
+      "key": "Categories.AssignmentSaveFailed",
+      "zh": "有便签的分类未能保存，请检查磁盘空间或文件夹权限。",
+      "ja": "付箋のカテゴリを保存できませんでした。ディスクの空き容量とフォルダーのアクセス権を確認してください。",
+      "en": "Couldn't save a note's category. Check available disk space and folder permissions.",
+      "surface": "分类 / 管理",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteManager.cs:112",
+        "src/Stickies/NoteManager.cs:131"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "多处复用：确认各场景语气是否完全一致",
+      "needs_confirm": true,
+      "source_key": "ui.有便签的分类未能保存-请检查磁盘空间或文件夹权限",
+      "source_index": 123
+    },
+    {
+      "key": "Edit.Paste",
+      "zh": "粘贴",
+      "ja": "貼り付け",
+      "en": "Paste",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:153"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.粘贴",
+      "source_index": 124
+    },
+    {
+      "key": "Notes.SearchCount",
+      "zh": "找到 {notes.Length} 张",
+      "ja": "{notes.Length} 枚の付箋が見つかりました",
+      "en": "{notes.Length} notes found",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:131"
+      ],
+      "placeholders": "{notes.Length}",
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.找到-notes-length-张",
+      "source_index": 125
+    },
+    {
+      "key": "Categories.ReservedName",
+      "zh": "这个名称已留给系统使用",
+      "ja": "この名前はシステムで使用されています。",
+      "en": "This name is reserved by the app.",
+      "surface": "分类 / 管理",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteManager.cs:79"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.这个名称已留给系统使用",
+      "source_index": 126
+    },
+    {
+      "key": "Notes.EmptyRuntime",
+      "zh": "这里还没有便签。\n点击「新建便签」，留下一个想法。",
+      "ja": "まだ付箋がありません。\n「新しい付箋」で、メモを書いてみましょう。",
+      "en": "No notes here yet.\nChoose “New note” to jot something down.",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml.cs:145",
+        "src/Stickies/IndexWindow.xaml.cs:148"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "多处复用：确认各场景语气是否完全一致",
+      "needs_confirm": false,
+      "source_key": "ui.这里还没有便签-点击-新建便签-留下一个想法",
+      "source_index": 127
+    },
+    {
+      "key": "Format.MinorMismatchKept",
+      "zh": "正文与格式略有差异，已优先保留格式",
+      "ja": "本文にわずかな違いがありますが、書式付きデータを優先しました。",
+      "en": "A small text difference was found. The formatted version has been kept.",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteEditor.cs:80"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": true,
+      "source_key": "ui.正文与格式略有差异-已优先保留格式",
+      "source_index": 128
+    },
+    {
+      "key": "App.Name",
+      "zh": "纸间",
+      "ja": "PaperNotes",
+      "en": "PaperNotes",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/DesktopIntegration.cs:137",
+        "src/Stickies/IndexWindow.xaml.cs:24",
+        "src/Stickies/Program.cs:29",
+        "src/Stickies/SettingsWindow.cs:161"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "品牌名「纸间」：确认是否音译/保留汉字",
+      "needs_confirm": true,
+      "source_key": "ui.纸间",
+      "source_index": 129
+    },
+    {
+      "key": "Tray.AppName",
+      "zh": "纸间 · PaperNotes",
+      "ja": "PaperNotes",
+      "en": "PaperNotes",
+      "surface": "托盘 / 全局快捷键",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/DesktopIntegration.cs:130"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "品牌名「纸间」：确认是否音译/保留汉字；含技术标识 PaperNotes，确认是否保留英文",
+      "needs_confirm": false,
+      "source_key": "ui.纸间-papernotes",
+      "source_index": 130
+    },
+    {
+      "key": "Notes.WindowTitle",
+      "zh": "纸间 · 便签索引",
+      "ja": "PaperNotes · 付箋一覧",
+      "en": "PaperNotes · Notes",
+      "surface": "索引窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/IndexWindow.xaml:2"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "品牌名「纸间」：确认是否音译/保留汉字",
+      "needs_confirm": false,
+      "source_key": "ui.纸间-便签索引",
+      "source_index": 131
+    },
+    {
+      "key": "Settings.WindowTitle",
+      "zh": "纸间 · 设置",
+      "ja": "PaperNotes · 設定",
+      "en": "PaperNotes · Settings",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/SettingsWindow.cs:31"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "品牌名「纸间」：确认是否音译/保留汉字",
+      "needs_confirm": false,
+      "source_key": "ui.纸间-设置",
+      "source_index": 132
+    },
+    {
+      "key": "App.StartFailedTitle",
+      "zh": "纸间启动失败",
+      "ja": "PaperNotes を起動できませんでした",
+      "en": "Couldn't start PaperNotes",
+      "surface": "系统提示 / 数据",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/Program.cs:14"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.纸间启动失败",
+      "source_index": 133
+    },
+    {
+      "key": "Categories.AccentColor",
+      "zh": "主题色",
+      "ja": "アクセントカラー",
+      "en": "Accent color",
+      "surface": "分类 / 管理",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/CategoryDialog.cs:47"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.主题色",
+      "source_index": 134
+    },
+    {
+      "key": "Format.IncreaseSize",
+      "zh": "字体变大",
+      "ja": "文字を大きく",
+      "en": "Increase font size",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteEditor.cs:789",
+        "src/Stickies/NoteEditor.cs:831"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.字体变大",
+      "source_index": 135
+    },
+    {
+      "key": "Format.DecreaseSize",
+      "zh": "字体变小",
+      "ja": "文字を小さく",
+      "en": "Decrease font size",
+      "surface": "便签窗口",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteEditor.cs:790",
+        "src/Stickies/NoteEditor.cs:832"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.字体变小",
+      "source_index": 136
+    },
+    {
+      "key": "Window.Maximize",
+      "zh": "最大化",
+      "ja": "最大化",
+      "en": "Maximize",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/TitleBar.cs:101",
+        "src/Stickies/TitleBar.cs:122"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.最大化",
+      "source_index": 137
+    },
+    {
+      "key": "Window.Minimize",
+      "zh": "最小化",
+      "ja": "最小化",
+      "en": "Minimize",
+      "surface": "设置 / 标题栏",
+      "usage": "用户可见文案",
+      "locations": [
+        "src/Stickies/NoteWindow.cs:81",
+        "src/Stickies/TitleBar.cs:94"
+      ],
+      "placeholders": {},
+      "layout_notes": "",
+      "notes": "",
+      "needs_confirm": false,
+      "source_key": "ui.最小化",
+      "source_index": 138
+    }
+  ],
+  "translation_status": "Translated and structurally checked; application integration and real UI testing are pending.",
+  "implementation_review": [
+    {
+      "key": "Edit.Undo",
+      "check": "确认 NoteWindow.cs 中“撤回”是否实际调用 Undo。"
+    },
+    {
+      "key": "Notes.UncategorizedEmpty",
+      "check": "译文澄清为未指定分类时创建的新便签，需与实际分类行为核对。"
+    },
+    {
+      "key": "Categories.AssignmentSaveFailed",
+      "check": "确认指的是保存便签分类归属失败，而不是分类定义保存失败。"
+    },
+    {
+      "key": "Categories.NameTooLong",
+      "check": "保留现有16字符约束；检查实现计数方式，不在本轮改变Unicode计数逻辑。"
+    },
+    {
+      "key": "Format.MinorMismatchKept",
+      "check": "按原提示语义翻译；需核实最新粘贴修复后该提示仍适用，不改变数据优先策略。"
+    },
+    {
+      "key": "Recovery.NoteRestoredPrefix",
+      "check": "保留恢复成功与“尝试恢复”的区别。"
+    },
+    {
+      "key": "App.Name",
+      "check": "日英暂采用现有技术品牌PaperNotes，不另造音译；不改变安装/文件/存储身份。"
+    }
+  ],
+  "source_duplicate_keys": {
+    "ui.新建便签": 3,
+    "ui.编辑分类": 2,
+    "ui.导出-txt": 2,
+    "ui.删除便签": 2,
+    "ui.删除分类": 2,
+    "ui.无法识别按键": 2,
+    "ui.新建分类": 2
+  },
+  "integration_notes": [
+    "资源key已改为唯一的语义英文Key；source_key仅用于追溯。",
+    "139条源条目顺序与原清单一致，未合并重复表面文案。",
+    "zh保留原清单文案，唯XAML实体换行为实际换行；需修改的中文产品文案另行审查。",
+    "颜色按名称翻译，未依据色号重新推断；默认色与分类色使用稳定值而非译名。",
+    "source占位符是插值表达式的说明，不是可执行格式串。接入时映射成明确参数。",
+    "用户文本与原生系统返回文本不翻译；不保证系统对话框按钮跟随应用语言。",
+    "additional_items为新增文案建议，只接入真实存在或本轮实现需要的控件，不增加无用入口。"
+  ],
+  "additional_items": [
+    {
+      "key": "Settings.Language",
+      "zh": "语言",
+      "ja": "言語",
+      "en": "Language",
+      "usage": "仅在实际对应功能中接入",
+      "locations": []
+    },
+    {
+      "key": "Settings.LanguageHelp",
+      "zh": "更改界面显示语言，不会翻译便签内容。",
+      "ja": "表示言語を変更します。付箋の内容は翻訳されません。",
+      "en": "Changes the interface language. Your notes won't be translated.",
+      "usage": "仅在实际对应功能中接入",
+      "locations": []
+    },
+    {
+      "key": "Settings.LanguageJapanese",
+      "zh": "日本語",
+      "ja": "日本語",
+      "en": "日本語",
+      "usage": "仅在实际对应功能中接入",
+      "locations": []
+    },
+    {
+      "key": "Settings.LanguageChinese",
+      "zh": "简体中文",
+      "ja": "简体中文",
+      "en": "简体中文",
+      "usage": "仅在实际对应功能中接入",
+      "locations": []
+    },
+    {
+      "key": "Settings.LanguageEnglish",
+      "zh": "English",
+      "ja": "English",
+      "en": "English",
+      "usage": "仅在实际对应功能中接入",
+      "locations": []
+    },
+    {
+      "key": "Hotkeys.Set",
+      "zh": "设置",
+      "ja": "設定",
+      "en": "Set",
+      "usage": "仅在实际对应功能中接入",
+      "locations": []
+    },
+    {
+      "key": "Hotkeys.Change",
+      "zh": "修改",
+      "ja": "変更",
+      "en": "Change",
+      "usage": "仅在实际对应功能中接入",
+      "locations": []
+    },
+    {
+      "key": "Hotkeys.CancelRecording",
+      "zh": "取消录入",
+      "ja": "入力をキャンセル",
+      "en": "Cancel recording",
+      "usage": "仅在实际对应功能中接入",
+      "locations": []
+    },
+    {
+      "key": "Hotkeys.RecordingHelp",
+      "zh": "请按下快捷键组合，按 Esc 取消。",
+      "ja": "キーの組み合わせを押してください。Esc でキャンセルできます。",
+      "en": "Press a key combination. Press Esc to cancel.",
+      "usage": "仅在实际对应功能中接入",
+      "locations": []
+    },
+    {
+      "key": "Hotkeys.RecordTooltip",
+      "zh": "设置此操作的全局快捷键",
+      "ja": "この操作のグローバルショートカットを設定",
+      "en": "Set a global shortcut for this action",
+      "usage": "仅在实际对应功能中接入",
+      "locations": []
+    },
+    {
+      "key": "Hotkeys.Conflict",
+      "zh": "该快捷键已被占用，请换一个组合。",
+      "ja": "このショートカットは使用中です。別の組み合わせを指定してください。",
+      "en": "This shortcut is already in use. Choose a different combination.",
+      "usage": "仅在实际对应功能中接入",
+      "locations": []
+    },
+    {
+      "key": "Edit.PastePlainText",
+      "zh": "粘贴为纯文本",
+      "ja": "テキストのみ貼り付け",
+      "en": "Paste as plain text",
+      "usage": "仅在实际对应功能中接入",
+      "locations": []
+    },
+    {
+      "key": "Paste.PlainTextFallback",
+      "zh": "无法保留格式，已按纯文本粘贴。",
+      "ja": "書式を保持できなかったため、テキストのみ貼り付けました。",
+      "en": "Formatting couldn't be kept. Pasted as plain text.",
+      "usage": "仅在实际对应功能中接入",
+      "locations": []
+    }
+  ],
+  "english_singular_overrides": {
+    "Notes.Count": "{notes.Length} note",
+    "Notes.SearchCount": "{notes.Length} note found",
+    "Import.PartialResultPrefix": "Imported {imported} note. The following files weren't imported:\n",
+    "Export.PartialResultPrefix": "Exported {count} of {notes.Length} note. The remaining note wasn't exported.\n"
+  }
+}

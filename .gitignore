@@ -1,0 +1,20 @@
+# Build outputs
+**/bin/
+**/obj/
+
+# Local / IDE / caches
+work/
+*.user
+*.suo
+.vs/
+.idea/
+*.swp
+*~
+
+# Published builds, ZIPs, previews, and verification notes under outputs/
+# Rebuild via build.ps1. Keep only explicitly un-ignored formal docs.
+outputs/*
+!outputs/使用说明.md
+
+# Temporary investigation / audit notes (not product source)
+docs/readme-audit.md

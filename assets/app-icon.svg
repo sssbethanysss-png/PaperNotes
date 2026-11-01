@@ -1,0 +1,71 @@
+<svg id="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%" class="drop-shadow-2xl">
+            <defs>
+              <!-- 整体柔和投影 -->
+              <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#1E1B18" flood-opacity="0.18"></feDropShadow>
+                <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1E1B18" flood-opacity="0.1"></feDropShadow>
+              </filter>
+
+              <!-- 折角背阴投影 -->
+              <filter id="fold-shadow" x="-30%" y="-30%" width="160%" height="160%">
+                <feDropShadow dx="-4" dy="5" stdDeviation="6" flood-color="#3D2E00" flood-opacity="0.22"></feDropShadow>
+              </filter>
+
+              <!-- 便签主体嫩黄渐变 -->
+              <linearGradient id="note-body-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFF9A6"></stop>
+                <stop offset="60%" stop-color="#FFE853"></stop>
+                <stop offset="100%" stop-color="#FFD836"></stop>
+              </linearGradient>
+
+              <!-- 便签翻折三角形渐变 -->
+              <linearGradient id="fold-flap-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFD633"></stop>
+                <stop offset="70%" stop-color="#E5A800"></stop>
+                <stop offset="100%" stop-color="#C78C00"></stop>
+              </linearGradient>
+
+              <!-- 折角亮边微光 -->
+              <linearGradient id="fold-highlight" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"></stop>
+                <stop offset="100%" stop-color="#FFF59D" stop-opacity="0.2"></stop>
+              </linearGradient>
+            </defs>
+
+            <!-- 组合主体 -->
+            <g filter="url(#soft-shadow)">
+              <!-- 便签主卡片 (右下角带斜切) -->
+              <path d="
+                M 128,72
+                L 384,72
+                A 40,40 0 0,1 424,112
+                L 424,336
+                L 336,424
+                L 128,424
+                A 40,40 0 0,1 88,384
+                L 88,112
+                A 40,40 0 0,1 128,72
+                Z" fill="url(#note-body-grad)"></path>
+
+              <!-- 便签内部文本横线 (暖深棕色，优雅且圆角) -->
+              <g fill="none" stroke="#3D3021" stroke-linecap="round" opacity="0.75">
+                <!-- 第一条线 -->
+                <line x1="148" y1="168" x2="310" y2="168" stroke-width="22"></line>
+                <!-- 第二条线（稍长） -->
+                <line x1="148" y1="236" x2="348" y2="236" stroke-width="22"></line>
+                <!-- 第三条线（较短） -->
+                <line x1="148" y1="304" x2="260" y2="304" stroke-width="22"></line>
+              </g>
+
+              <!-- 右下角翻折的便签角 (自然卷曲弧度) -->
+              <path d="
+                M 336,424
+                C 346,375 375,346 424,336
+                L 364,336
+                A 28,28 0 0,0 336,364
+                Z" fill="url(#fold-flap-grad)" filter="url(#fold-shadow)"></path>
+
+              <!-- 折角弧形边缘高光线 -->
+              <path d="M 336,424 C 346,375 375,346 424,336" fill="none" stroke="url(#fold-highlight)" stroke-width="3.5" stroke-linecap="round"></path>
+            </g>
+          </svg>

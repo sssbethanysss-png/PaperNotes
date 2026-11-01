@@ -1,0 +1,139 @@
+Notes.Count	{notes.Length} 枚の付箋	{notes.Length} notes
+Hotkeys.RegisterFailed	「{actionLabel}」のショートカット {chord} を登録できませんでした。他のアプリで使用されているか、システムで制限されています。	Couldn't register {chord} for “{actionLabel}”. It may be in use by another app or restricted by Windows.
+Notes.CategoryEmpty	「{name}」にはまだ付箋がありません。\n「新しい付箋」で、このカテゴリに付箋を追加できます。	No notes in “{name}” yet.\nChoose “New note” to add one to this category.
+Notes.NewButton	＋  新しい付箋	＋  New note
+Note.Translucent	半透明	Translucent
+Common.Save	保存	Save
+Settings.Save	保存	Save
+Note.SaveRetrying	保存できませんでした。ディスクを確認してください。再試行中です。	Couldn't save. Check your disk. Retrying…
+Settings.SaveFailedPrefix	設定を保存できませんでした：	Couldn't save settings:
+Categories.EditTitle	カテゴリを編集	Edit category
+Categories.EditMenu	カテゴリを編集…	Edit category…
+Recovery.Title	付箋の復元について	Note recovery
+Note.Color	付箋の色	Note color
+Hotkeys.ModifierOnly	Ctrl、Alt、Shift、Win 以外のキーも組み合わせてください。	Add a key other than Ctrl, Alt, Shift, or Win.
+Export.UnsavedNotes	未保存の付箋があります。ディスクを確認してから、もう一度エクスポートしてください。	Some notes haven't been saved. Check your disk, then try exporting again.
+Notes.HideBlocked	未保存の付箋があるため、非表示にできませんでした。ディスクの空き容量とフォルダーのアクセス権を確認してください。	Couldn't hide notes because some haven't been saved. Check available disk space and folder permissions.
+Error.OperationFailedPrefix	操作を完了できませんでした。ディスクの空き容量とフォルダーのアクセス権を確認してください。\n	Couldn't complete the action. Check available disk space and folder permissions.\n
+Edit.Undo	元に戻す	Undo
+Common.Create	作成	Create
+Format.Bold	太字	Bold
+Notes.Open	付箋を開く	Open note
+Notes.OpenListMenu	付箋一覧を開く	Open note list
+Tray.OpenList	付箋一覧を開く	Open note list
+Colors.Lavender	ラベンダー	Lavender
+Export.TextButton	TXT をエクスポート	Export TXT
+Export.TextMenu	TXT をエクスポート…	Export TXT…
+Export.FailedPrefix	エクスポートできませんでした：\n	Couldn't export:\n
+Export.IncompleteTitle	エクスポートが完了しませんでした	Export incomplete
+Import.Text	TXT をインポート	Import TXT
+Import.ResultsTitle	インポート結果	Import results
+Settings.LaunchAtLogin	Windows へのサインイン時に起動する	Launch at Windows sign-in
+Hotkeys.RecordHint	クリックしてから、キーの組み合わせを押してください。	Click, then press a key combination.
+Categories.Label	カテゴリ	Category
+Categories.SaveFailedPrefix	カテゴリを保存できませんでした：	Couldn't save category:
+Categories.Name	カテゴリ名	Category name
+Note.AlwaysOnTop	常に手前に表示	Always on top
+Edit.Copy	コピー	Copy
+Format.TextMismatch	書式付きデータと本文が一致しません。	The formatted content doesn't match the plain text.
+Format.Highlight	蛍光ペン	Highlight
+Format.RestoreFailed	書式を復元できませんでした。本文はすべて保持されています。	Couldn't restore formatting. All text has been kept.
+Format.MismatchPlainTextKept	書式付きデータと本文が一致しないため、本文をすべて保持しました。	The formatted content didn't match the plain text. All text has been kept.
+Note.MoreTooltip	その他：最前面表示、ピン留め、色、削除	More: always on top, pin, color, delete
+Note.PinInList	一覧の先頭にピン留め	Pin to top of list
+Window.Close	閉じる	Close
+Notes.EmptyXaml	まだ付箋がありません。\n「新しい付箋」で、最初のメモを書いてみましょう。	No notes yet.\nChoose “New note” to jot down your first thought.
+App.ExitBlocked	未保存の付箋があるため、終了できませんでした。ディスクの空き容量とフォルダーのアクセス権を確認し、もう一度終了してください。	Couldn't quit because some notes haven't been saved. Check available disk space and folder permissions, then try again.
+Window.Restore	元のサイズに戻す	Restore
+Edit.Cut	切り取り	Cut
+Settings.NewNotesOnly	新しく作成する付箋にのみ適用されます。既存の付箋は変わりません。	Applies only to new notes. Existing notes won't change.
+Settings.LaunchAtLoginHelp	Windows にサインインすると、PaperNotes が自動で起動します。	PaperNotes opens automatically when you sign in to Windows.
+Note.BlankTitle	空白の付箋	Blank note
+Settings.Shortcuts	ショートカット	Keyboard shortcuts
+Hotkeys.InvalidFormat	ショートカットの形式が正しくありません。	Invalid shortcut format.
+Hotkeys.ModifierAndKeyRequired	修飾キーと、組み合わせるキーを指定してください。	Choose a modifier and another key.
+Hotkeys.KeyRequired	組み合わせるキーを指定してください。	Choose a key for this shortcut.
+Hotkeys.Duplicate	それぞれ別のグローバルショートカットを設定してください。	Use a different global shortcut for each action.
+Notes.UncategorizedEmpty	未分類の付箋はありません。\nカテゴリを指定せずに作成した付箋がここに表示されます。	No uncategorized notes.\nNotes created without a category appear here.
+Notes.NoSearchResults	一致する付箋がありません。	No matching notes.
+Colors.Ivory	アイボリー	Ivory
+Categories.NameHasNewline	カテゴリ名に改行は使えません。	Category names can't contain line breaks.
+Categories.NameTooLong	カテゴリ名は16文字以内にしてください。	Use 16 characters or fewer for the category name.
+Settings.DefaultNoteColor	新しい付箋の色	Default note color
+Hotkeys.BareLetterOrDigit	文字や数字を単独でグローバルショートカットには設定できません。	A letter or number alone can't be used as a global shortcut.
+Colors.PaleYellow	ペールイエロー	Pale yellow
+Colors.PaleGreen	ペールグリーン	Pale green
+Common.Clear	クリア	Clear
+Hotkeys.ClearTooltip	グローバルショートカットを解除	Clear global shortcut
+Hotkeys.Recording	キーの組み合わせを押してください…	Press a key combination…
+Categories.NameRequired	カテゴリ名を入力してください。	Enter a category name.
+Common.Cancel	キャンセル	Cancel
+Categories.AllTab	すべて	All
+Notes.AllTitle	すべての付箋	All notes
+Hotkeys.RequiredModifier	Ctrl、Alt、Win のいずれかを含めてください。	Include Ctrl, Alt, or Win in the shortcut.
+Hotkeys.ScopeHelp	グローバルショートカットは、他のアプリを使用中でも使えます。付箋一覧の Ctrl+N など、アプリ内のショートカットはこの設定の影響を受けません。	Global shortcuts work even when you're using another app. In-app shortcuts, such as Ctrl+N in the note list, aren't affected by these settings.
+Edit.SelectAll	すべて選択	Select all
+Settings.Subtitle	使い方に合わせてカスタマイズ	Make PaperNotes work for you
+Format.Checklist	チェックリスト	Checklist
+Note.DeleteTitle	付箋を削除	Delete note
+Note.DeleteMenu	付箋を削除…	Delete note…
+Categories.DeleteTitle	カテゴリを削除	Delete category
+Categories.DeleteConfirm	カテゴリ「{category.Name}」を削除しますか？\n付箋は削除されず、「未分類」に移動します。	Delete the category “{category.Name}”?\nIts notes will move to “Uncategorized” and won't be deleted.
+Categories.DeleteMenu	カテゴリを削除…	Delete category…
+Note.DeleteFailedPrefix	削除できませんでした。付箋はそのまま残っています。\n	Couldn't delete the note. It has been kept.\n
+Note.DeleteConfirm	この付箋を削除しますか？この操作は元に戻せません。	Delete this note? This can't be undone.
+Settings.Title	設定	Settings
+Settings.RecoveryWarning	設定ファイルを読み込めなかったため、バックアップからの復元を試みました。付箋の内容に影響はありません。	Couldn't read the settings file. An attempt was made to restore a backup. Your notes aren't affected.
+Notes.Search	検索	Search
+Colors.SkyBlue	スカイブルー	Sky blue
+Settings.General	一般	General
+Tray.Quit	PaperNotes を終了	Quit PaperNotes
+Settings.Appearance	外観	Appearance
+Categories.Uncategorized	未分類	Uncategorized
+Note.Untitled	無題の付箋	Untitled note
+Hotkeys.NotSet	未設定	Not set
+Files.TextFilter	テキストファイル (*.txt)|*.txt	Text files (*.txt)|*.txt
+Format.Title	書式	Formatting
+Import.Utf8Required	UTF-8 として読み込めませんでした。UTF-8 形式で保存し直してから、もう一度お試しください。	Couldn't read this file as UTF-8. Save it with UTF-8 encoding, then try again.
+Recovery.NoteReadFailedPrefix	付箋を読み込めませんでした。元のファイルは保持されています：	Couldn't read the note. The original file has been kept:
+App.DataUnavailablePrefix	ローカルデータにアクセスできません。フォルダーのアクセス権とディスクの空き容量を確認してください。\n既存の付箋ファイルは保持されています。\n\n	Can't access local data. Check folder permissions and available disk space.\nYour existing note files have been kept.\n\n
+App.PathUnavailable	アプリの保存先を確認できませんでした。	Couldn't determine the application path.
+Hotkeys.UnknownKey	このキーは認識できません。	This key isn't recognized.
+Hotkeys.UnknownKeyPrefix	認識できないキー：	Unrecognized key:
+Colors.MistGray	ミストグレー	Mist gray
+Format.Underline	下線	Underline
+Tray.ShowNotes	付箋を表示	Show notes
+Notes.VisibilitySaveFailedPrefix	付箋の表示状態を保存できませんでした：	Couldn't save note visibility:
+Settings.NewNotesOnTop	新しい付箋を常に手前に表示する	Keep new notes always on top
+Hotkeys.CreateAction	新しい付箋	New note
+Tray.NewNote	新しい付箋	New note
+Categories.NewTitle	新しいカテゴリ	New category
+Categories.NewMenu	新しいカテゴリ…	New category…
+Export.SelectFolder	エクスポート先のフォルダーを選択	Choose an export folder
+Colors.SelectTooltip	この色を選択	Choose this color
+Recovery.NoteRestoredPrefix	付箋を1枚、バックアップから復元しました。元のファイルは保持されています：	Restored one note from a backup. The original file has been kept:
+Export.PartialResultPrefix	{notes.Length} 枚中 {count} 枚をエクスポートしました。残りの付箋はエクスポートされませんでした。\n	Exported {count} of {notes.Length} notes. The remaining notes weren't exported.\n
+Import.PartialResultPrefix	{imported} 枚の付箋をインポートしました。次のファイルはインポートできませんでした：\n	Imported {imported} notes. The following files weren't imported:\n
+Categories.DuplicateName	同じ名前のカテゴリがすでにあります。	A category with this name already exists.
+Hotkeys.ToggleAllAction	すべての付箋を表示／非表示	Show/hide all notes
+Note.HideMenu	付箋を非表示	Hide note
+Note.HideTooltip	付箋を非表示（削除はされません）	Hide note (without deleting)
+Notes.HideAll	すべての付箋を非表示	Hide all notes
+Colors.CherryPink	さくらピンク	Cherry blossom pink
+Settings.DefaultColorHelp	新しく作成する付箋の背景色です。	The background color for new notes.
+Categories.AssignmentSaveFailed	付箋のカテゴリを保存できませんでした。ディスクの空き容量とフォルダーのアクセス権を確認してください。	Couldn't save a note's category. Check available disk space and folder permissions.
+Edit.Paste	貼り付け	Paste
+Notes.SearchCount	{notes.Length} 枚の付箋が見つかりました	{notes.Length} notes found
+Categories.ReservedName	この名前はシステムで使用されています。	This name is reserved by the app.
+Notes.EmptyRuntime	まだ付箋がありません。\n「新しい付箋」で、メモを書いてみましょう。	No notes here yet.\nChoose “New note” to jot something down.
+Format.MinorMismatchKept	本文にわずかな違いがありますが、書式付きデータを優先しました。	A small text difference was found. The formatted version has been kept.
+App.Name	PaperNotes	PaperNotes
+Tray.AppName	PaperNotes	PaperNotes
+Notes.WindowTitle	PaperNotes · 付箋一覧	PaperNotes · Notes
+Settings.WindowTitle	PaperNotes · 設定	PaperNotes · Settings
+App.StartFailedTitle	PaperNotes を起動できませんでした	Couldn't start PaperNotes
+Categories.AccentColor	アクセントカラー	Accent color
+Format.IncreaseSize	文字を大きく	Increase font size
+Format.DecreaseSize	文字を小さく	Decrease font size
+Window.Maximize	最大化	Maximize
+Window.Minimize	最小化	Minimize

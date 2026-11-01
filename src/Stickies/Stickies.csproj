@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>PaperNotes</AssemblyName>
+    <Version>0.2.10</Version>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <!-- WPF owns DPI awareness; Windows Forms is used only for tray and monitor enumeration. -->
+    <NoWarn>$(NoWarn);WFAC010</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Runtime pack URI + loose copy beside exe (tray/window fallback). ApplicationIcon embeds into the PE. -->
+    <Resource Include="app.ico" />
+    <Content Include="app.ico" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <EmbeddedResource Include="Resources\ui-text-translated.json" LogicalName="PaperNotes.ui-text-translated.json" />
+    <Content Include="Resources\ui-text-translated.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
